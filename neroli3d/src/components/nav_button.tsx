@@ -1,9 +1,15 @@
 import "./components_css/nav_button.css";
+import { Link } from "react-router-dom";
 
-function Nav_button({ nombre }: { nombre: string }) {
+function Nav_button({ nombre , ruta}: { nombre: string, ruta: string }) {
+  if (nombre === "") {
+    return null;
+  }
   return (
     <>
-      <button>{nombre}</button>
+      <Link to={ruta} style={{ textDecoration: 'none' }}>
+        <button>{nombre}</button>
+      </Link>
     </>
   );
 }

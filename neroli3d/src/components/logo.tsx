@@ -7,12 +7,12 @@ function Logo() {
   return (
     <>
       <div id="main_div">
-        <NavButton nombre="Catálogo" />
+        <NavButton nombre="Catálogo" ruta="/catalogo" />
         <div id="logo">
           <h1>Neroli3D</h1>
-          <img src={logoImage} alt="Logo" />
+          <img className="img-logo" src={logoImage} alt="Logo" />
         </div>
-        <NavButton nombre="Contacto" />
+        <NavButton nombre="Contacto" ruta="/contacto" />
       </div>
     </>
   );

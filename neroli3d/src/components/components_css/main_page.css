@@ -1,9 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 #main_div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  position: fixed;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  min-height: 100vh;       /* 100vh significa '100% de la altura de la pantalla (Viewport Height)' */
+  box-sizing: border-box;
 }
 
 #logo {
@@ -11,11 +19,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
+  height: 100%;
   gap: 20px;
 }
 
-img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s;
-  cursor: pointer;
+
+@media (max-width: 768px) {
+  #main_div {
+    flex-direction: column;  
+    justify-content: center;    
+    text-align: center;           
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
 }
