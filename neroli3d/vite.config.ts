@@ -9,4 +9,16 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] })
   ],
   base: './',
+  build: {
+    // Esto obliga a no añadir atributos cross-origin innecesarios
+    modulePreload: false,
+    rollupOptions: {
+      output: {
+        // Evita que Vite cree nombres de archivos muy complejos
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
+      }
+    }
+  }
 })
