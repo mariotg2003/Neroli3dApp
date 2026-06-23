@@ -6,10 +6,16 @@ import Pines from "../assets/catalog_image/pines.jpg"
 function ModalCard({producto}:{producto:string}) {
     const [abierto, setAbierto] = useState(false);
 
+    const handleOpenChange = (open: boolean) => {
+        setAbierto(open);
+        if (open) document.body.classList.add('modal-open');
+        else document.body.classList.remove('modal-open');
+    };
+
     return (
         <>
             <button type="button" onClick={() => setAbierto(true)}>Ver más</button>
-            <Dialog.Root open={abierto} onOpenChange={setAbierto}>
+            <Dialog.Root open={abierto} onOpenChange={handleOpenChange}>
                 <Dialog.Portal>
                     <Dialog.Overlay className="back"/>
 
