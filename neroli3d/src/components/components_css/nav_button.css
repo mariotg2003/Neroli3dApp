@@ -14,17 +14,26 @@ button:hover {
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
   button {
-  background-color: #afa48f;
-  width: 150px;
-  height: 60px;
-  font-size: 2rem;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
+    background-color: #afa48f;
+    width: 150px;
+    height: 60px;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+    max-width: 220px;
+    font-size: 1.4rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 }

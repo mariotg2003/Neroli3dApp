@@ -8,7 +8,6 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 70px;
   padding-bottom: 30px;
   min-height: 100vh;       /* 100vh significa '100% de la altura de la pantalla (Viewport Height)' */
   box-sizing: border-box;
@@ -30,7 +29,19 @@ body{
     flex-direction: column;  
     justify-content: center;    
     text-align: center;           
-    padding-top: 70px;
+    padding-top: 50px;
+    min-height: 100vh; 
     padding-bottom: 50px;
   }
+
+  #logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
 }

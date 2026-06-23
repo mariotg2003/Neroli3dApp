@@ -1,7 +1,7 @@
 import "./App.css";
-import MainPage from "./main_page.tsx";
-import Catalog from "./catalog.tsx";
-import Contact from "./contact.tsx";
+import MainPage from "./app_pages/main_page.tsx";
+import Catalog from "./app_pages/catalog.tsx";
+import Contact from "./app_pages/contact.tsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

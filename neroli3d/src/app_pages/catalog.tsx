@@ -1,6 +1,6 @@
-import TopBar from "./components/top_bar.tsx";
-import BotBar from "./components/bot_bar.tsx";
-import CardContainer from "./components/card_container.tsx";
+import TopBar from "../components/top_bar.tsx";
+import BotBar from "../components/bot_bar.tsx";
+import CardContainer from "../components/card_container.tsx";
 
 function catalog() {
   return (
