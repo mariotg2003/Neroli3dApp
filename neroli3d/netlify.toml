@@ -3,10 +3,14 @@
   publish = "dist"
 
 [[headers]]
-  # Esto le dice a Netlify que trate todos los archivos JS como módulos correctamente
   for = "/*.js"
   [headers.values]
     Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
 
 [[redirects]]
   from = "/*"
