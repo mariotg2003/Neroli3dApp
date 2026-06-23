@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  # Esto le dice a Netlify que trate todos los archivos JS como módulos correctamente
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
