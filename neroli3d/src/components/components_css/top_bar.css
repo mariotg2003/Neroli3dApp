@@ -3,25 +3,22 @@
 }
 
 #top_bar {
-  width: 100%;
-  height: var(--topbar-height);
-  background-color: #dbcd88;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2rem; /* Reducido de 5rem a algo más manejable */
-  box-sizing: border-box;
+  /* Usamos !important solo para depurar y asegurar que gane */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 70px !important;
+  background-color: #dbcd88 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  z-index: 1000 !important;
 }
 
 #elements {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px; /* Ajustado */
-  width: 100%;
+  display: flex !important;
+  gap: 100px !important;
 }
 
 /* Ajustes para móviles */
