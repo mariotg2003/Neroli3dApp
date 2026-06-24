@@ -18,6 +18,15 @@
     border: 2px solid black;
 }
 
+.modal-text{
+    height: 90%;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .modal-title{
     background-color: aliceblue;
 }

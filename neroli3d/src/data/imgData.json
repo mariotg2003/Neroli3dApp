@@ -1,0 +1,9 @@
+[
+    {"name": "estampitas",  "url": "/src/assets/catalog_image/estampitas.jpg", "description" : "Estampitas 3D"}, 
+    {"name" : "pines",  "url": "/src/assets/catalog_image/pines.jpg", "description" : "Pines para todo tipo de celebraciones y eventos"},
+    {"name" : "neropops", "url": "/src/assets/catalog_image/neropops.jpg", "description" : "Tus figuras favoritas para capturar momentos increíbles"},
+    {"name" : "celebraciones", "url": "/src/assets/neroli_logo.png", "description" : "Todo tipo de merchandising para eventos y celebraciones "},
+    {"name" : "nerolamparas", "url": "/src/assets/catalog_image/nerolamparas.jpg", "description" : "Lamparitas personalizadas para capturar momentos especiales"},
+    {"name" : "neronazarenos", "url": "/src/assets/neroli_logo.png", "description" : "Nazarenos en miniatura para que la pasión nunca acabe"},
+    {"name" : "coleccionismo", "url": "/src/assets/catalog_image/coleccionismo.jpg", "description" : "Figuras de coleccionismo diseñadas desde 0"}
+]

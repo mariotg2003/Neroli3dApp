@@ -5,13 +5,13 @@ function card_container() {
   return (
     <>
         <div className="card_container">
-            <Card nombre="Estampitas 3D" />
-            <Card nombre="Pines" />
-            <Card nombre="Nero Pops" />
-            <Card nombre="Celebraciones" />
-            <Card nombre="NeroLámparas" />
-            <Card nombre="NeroNazarenos" />
-            <Card nombre="Coleccionismo" />
+            <Card nombre="Estampitas 3D" urlName = "estampitas"/>
+            <Card nombre="Pines" urlName = "pines"/>
+            <Card nombre="Nero Pops" urlName = "neropops"/>
+            <Card nombre="Celebraciones" urlName = "celebraciones"/>
+            <Card nombre="NeroLámparas" urlName = "nerolamparas"/>
+            <Card nombre="NeroNazarenos" urlName = "neronazarenos"/>
+            <Card nombre="Coleccionismo" urlName = "coleccionismo"/>
         </div>
     </>
   )

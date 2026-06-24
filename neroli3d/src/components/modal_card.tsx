@@ -1,31 +1,34 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
 import "./components_css/modal_card.css";
-import Pines from "../assets/catalog_image/pines.jpg"
+import {useSearchInfo} from "../customHooks/findImg";
 
-function ModalCard({producto}:{producto:string}) {
+function ModalCard({producto, productoName}:{producto:string, productoName:string}) {
     const [abierto, setAbierto] = useState(false);
+
+    const product = useSearchInfo(productoName)
+
 
     return (
         <>
-            <button type="button" onClick={() => setAbierto(true)}>Ver más</button>
+            <button className="button-card" type="button" onClick={() => setAbierto(true)}>Ver más</button>
             <Dialog.Root open={abierto} onOpenChange={setAbierto}>
                 <Dialog.Portal>
                     <Dialog.Overlay className="back"/>
 
                     <Dialog.Content className="content">
-                        <div className="modal-img"><img className="catalog-img" src={Pines} alt="Detalle del producto"/></div>
+                        <div className="modal-img"><img className="catalog-img" src={product.url} alt="Detalle del producto"/></div>
                         <div className="modal-info">
                             <div className="modal-title">
                                 <Dialog.Title>{producto}</Dialog.Title>
                             </div>
                             
                             <div className="modal-text">
-                                <Dialog.Description>Descripción accesible.</Dialog.Description>
+                                <Dialog.Description>{product.description}</Dialog.Description>
                             </div>
 
                             <Dialog.Close asChild>
-                                <button type="button">Cerrar</button>
+                                <button type="button" className="button-card">Cerrar</button>
                             </Dialog.Close>
                         </div>
 

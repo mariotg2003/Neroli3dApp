@@ -1,16 +1,19 @@
 import "./components_css/card.css";
-import logoImage from "../assets/neroli_logo.jpg";
 import ModalCard from "../components/modal_card";
+import {useSearchInfo} from "../customHooks/findImg";
 
-function card({nombre}: {nombre: string}){
+function Card({nombre, urlName}: {nombre: string, urlName: string}){
+
+    const product = useSearchInfo(urlName)
+    console.log(product.url)
     return(
         <>
             <div className="card">
-                <img className="card-image" src={logoImage} alt="Image" />
+                <img className="card-image" src={product.url} alt="Image" />
                 <h3 className="card-title">{nombre}</h3>
-                <ModalCard producto={nombre}></ModalCard>
+                <ModalCard producto={nombre} productoName={urlName}></ModalCard>
             </div>
         </>
     )
 }
-export default card;
+export default Card;

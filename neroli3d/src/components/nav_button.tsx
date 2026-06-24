@@ -8,7 +8,7 @@ function Nav_button({ nombre , ruta}: { nombre: string, ruta: string }) {
   return (
     <>
       <Link to={ruta} style={{ textDecoration: 'none' }}>
-        <button>{nombre}</button>
+        <button className="button-nav">{nombre}</button>
       </Link>
     </>
   );

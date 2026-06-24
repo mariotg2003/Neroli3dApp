@@ -15,10 +15,7 @@
 
 .card-image{
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 50px;
 }
 
 .card-title{
@@ -28,7 +25,7 @@
     color: #4f4928;
 }
 
-button{
+.button-card{
     height: 40px;
     width: 150px;
     background-color: #afa48f;

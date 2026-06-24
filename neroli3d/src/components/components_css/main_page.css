@@ -45,3 +45,16 @@ body{
 }
 
 }
+
+@media (max-width: 480px) {
+  #main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 70px;     /* 100vh significa '100% de la altura de la pantalla (Viewport Height)' */
+    box-sizing: border-box;
+  }
+  
+}
+
+
