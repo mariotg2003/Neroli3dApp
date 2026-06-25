@@ -2,6 +2,7 @@
     position: fixed;
     width: 80%;
     max-width: 1100px;
+    max-height: 90vh;
     height: 80%;
     top: 50%;
     left: 50%;
@@ -16,19 +17,24 @@
     justify-content: center;
     background-color: #f3ebe3;
     border: 2px solid black;
+    overflow: hidden;
 }
 
 .modal-text{
     height: 90%;
     margin-top: 10px;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .modal-title{
-    background-color: aliceblue;
+  font-size: 3rem;
+  color: #4f4928;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
 }
 
 .modal-info{
@@ -38,6 +44,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    white-space: pre-line;
+    text-align: justify;
 }
 
 .modal-img{
@@ -63,6 +71,37 @@
     inset: 0;
 }
 
+@media (max-width: 1000px) {
+    .content{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow: auto;
+        padding-top: 20%;
+    }
+
+    .modal-img, .modal-info{
+        order: initial;
+        display: flex;
+        width: 100%;
+    }
+
+    .catalog-img{
+        width: 100%;
+        max-height: 300px;
+        height: auto;
+        padding-top: -5px;
+    }
+
+    .modal-title{
+        font-size: 3rem;
+    }
+}
+
+
+
+
 /* Responsive: en pantallas pequeñas apilar verticalmente */
 @media (max-width: 720px) {
     .content{
@@ -70,16 +109,77 @@
         width: 90%;
         height: auto;
         max-height: 90vh;
+        overflow: auto;
+        padding-top: 80px;
     }
 
     .modal-img, .modal-info{
         order: initial;
-        flex: none;
+        display: flex;
         width: 100%;
     }
 
     .catalog-img{
         width: 100%;
+        max-height: 300px;
         height: auto;
+    }
+
+    .modal-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .content{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow: auto;
+        padding-top: clamp(40px, 25vh, 100px);
+    }
+
+    .modal-img, .modal-info{
+        order: initial;
+        display: flex;
+        width: 100%;
+    }
+
+    .catalog-img{
+        width: 100%;
+        max-height: 300px;
+        height: auto;
+    }
+
+    .modal-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .content{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow: auto;
+        padding-top: clamp(40px, 25vh, 140px);
+    }
+
+    .modal-img, .modal-info{
+        order: initial;
+        display: flex;
+        width: 100%;
+    }
+
+    .catalog-img{
+        width: 100%;
+        max-height: 300px;
+        height: auto;
+    }
+
+    .modal-title{
+        font-size: 1.5rem;
     }
 }

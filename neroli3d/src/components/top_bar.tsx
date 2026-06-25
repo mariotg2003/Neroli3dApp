@@ -4,6 +4,12 @@ import { useState } from "react";
 
 function TopBar({ nombreIzq, rutaIzq, nombreDer, rutaDer, titulo }: { nombreIzq: string, rutaIzq: string, nombreDer: string, rutaDer: string, titulo: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const show = nombreIzq != "" ? false : true
+
+  if (show) {
+    return <div><h1>Neroli3D</h1></div>
+  }
+
 
   return (
     <div id="top_bar">
