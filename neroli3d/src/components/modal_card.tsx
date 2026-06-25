@@ -6,8 +6,8 @@ import {useSearchInfo} from "../customHooks/findImg";
 function ModalCard({producto, productoName}:{producto:string, productoName:string}) {
     const [abierto, setAbierto] = useState(false);
 
-    const product = useSearchInfo(productoName)
-
+    const product = useSearchInfo(productoName);
+    if (!product) return null;
 
     return (
         <>
@@ -17,7 +17,7 @@ function ModalCard({producto, productoName}:{producto:string, productoName:strin
                     <Dialog.Overlay className="back"/>
 
                     <Dialog.Content className="content">
-                        <div className="modal-img"><img className="catalog-img" src={product.url} alt="Detalle del producto"/></div>
+                        <div className="modal-img"><img className="catalog-img" src={product.url} alt={producto}/></div>
                         <div className="modal-info">
                             <div className="modal-title">
                                 <Dialog.Title>{producto}</Dialog.Title>
