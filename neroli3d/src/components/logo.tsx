@@ -9,7 +9,10 @@ function Logo() {
       <div id="main_div">
         <NavButton nombre="Catálogo" ruta="/catalogo" />
         <div id="logo">
-          <img className="img-logo" src={logoImage} alt="Logo" />
+          <div className="logo-stack">
+            <img className="img-logo img-logo-base" src={logoImage} alt="Logo" />
+            <div className="logo-overlay-div" aria-hidden="true"> <h2>¡Bienvenid@!</h2>Visita nuestro catálogo y si tienes alguna petición, contacta con nosotros por cualquiera de nuestras redes o por gmail!</div>
+          </div>
         </div>
         <NavButton nombre="Contacto" ruta="/contacto" />
       </div>
